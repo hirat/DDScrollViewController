@@ -11,7 +11,7 @@
 @interface DDScrollViewController () <UIScrollViewDelegate>
 @property UIScrollView *scrollView;
 @property NSMutableArray *contents;
-@property (nonatomic) CGFloat offsetRadio;
+@property (nonatomic) CGFloat offsetRatio;
 @property (nonatomic) NSInteger activeIndex;
 @end
 
@@ -70,7 +70,7 @@
         [self.scrollView addSubview: view];
     }
     
-    [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width + self.scrollView.frame.size.width * self.offsetRadio, 0)];
+    [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width + self.scrollView.frame.size.width * self.offsetRatio, 0)];
 }
 
 - (NSInteger)validIndexValue:(NSInteger)value
@@ -102,22 +102,22 @@
     return [self.dataSource numberOfViewControllerInDDScrollView:self];
 }
 
-- (void)setOffsetRadio:(CGFloat)offsetRadio
+- (void)setoffsetRatio:(CGFloat)offsetRatio
 {
-    if (_offsetRadio != offsetRadio)
+    if (_offsetRatio != offsetRatio)
     {
-        _offsetRadio = offsetRadio;
+        _offsetRatio = offsetRatio;
         
-        [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width + self.scrollView.frame.size.width * offsetRadio, 0)];
-        if (offsetRadio > 0.5)
+        [self.scrollView setContentOffset:CGPointMake(self.scrollView.frame.size.width + self.scrollView.frame.size.width * offsetRatio, 0)];
+        if (offsetRatio > 0.5)
         {
-            _offsetRadio = offsetRadio - 1;
+            _offsetRatio = offsetRatio - 1;
             self.activeIndex = [self validIndexValue: self.activeIndex + 1];
         }
         
-        if (offsetRadio < -0.5)
+        if (offsetRatio < -0.5)
         {
-            _offsetRadio = offsetRadio + 1;
+            _offsetRatio = offsetRatio + 1;
             self.activeIndex = [self validIndexValue: self.activeIndex - 1];
         }
     }
@@ -127,7 +127,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    self.offsetRadio = scrollView.contentOffset.x/CGRectGetWidth(scrollView.frame) - 1;
+    self.offsetRatio = scrollView.contentOffset.x/CGRectGetWidth(scrollView.frame) - 1;
 }
 
 @end
