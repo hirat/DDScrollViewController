@@ -14,9 +14,10 @@
 		73E86F41182CA1F500D79286 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E86F40182CA1F500D79286 /* main.m */; };
 		73E86F45182CA1F500D79286 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E86F44182CA1F500D79286 /* AppDelegate.m */; };
 		73E86F47182CA1F500D79286 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73E86F46182CA1F500D79286 /* Images.xcassets */; };
-		73E86F6B182CA2F700D79286 /* DDScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E86F6A182CA2F700D79286 /* DDScrollViewController.m */; };
 		73E86F70182CA45700D79286 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73E86F6F182CA45700D79286 /* HomeViewController.m */; };
 		73E86F72182CA46800D79286 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73E86F71182CA46800D79286 /* iPhone.storyboard */; };
+		A13CADFB19B4131B00C44284 /* DDScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A13CADF919B4131B00C44284 /* DDScrollViewController.m */; };
+		A13CADFE19B4149F00C44284 /* DemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A13CADFD19B4149F00C44284 /* DemoTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,11 +33,13 @@
 		73E86F44182CA1F500D79286 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		73E86F46182CA1F500D79286 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		73E86F4D182CA1F500D79286 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		73E86F69182CA2F600D79286 /* DDScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDScrollViewController.h; sourceTree = "<group>"; };
-		73E86F6A182CA2F700D79286 /* DDScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDScrollViewController.m; sourceTree = "<group>"; };
 		73E86F6E182CA45700D79286 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		73E86F6F182CA45700D79286 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		73E86F71182CA46800D79286 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
+		A13CADF819B4131B00C44284 /* DDScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDScrollViewController.h; sourceTree = "<group>"; };
+		A13CADF919B4131B00C44284 /* DDScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDScrollViewController.m; sourceTree = "<group>"; };
+		A13CADFC19B4149F00C44284 /* DemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTableViewController.h; sourceTree = "<group>"; };
+		A13CADFD19B4149F00C44284 /* DemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +59,8 @@
 		73E86F28182CA1F500D79286 = {
 			isa = PBXGroup;
 			children = (
+				A13CADFA19B4131B00C44284 /* DDScrollViewController */,
 				73E86F3A182CA1F500D79286 /* DDScrollViewController Example */,
-				73E86F67182CA2D300D79286 /* Vendor */,
 				73E86F33182CA1F500D79286 /* Frameworks */,
 				73E86F32182CA1F500D79286 /* Products */,
 			);
@@ -106,24 +109,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		73E86F67182CA2D300D79286 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				73E86F68182CA2F600D79286 /* DDScrollViewController */,
-			);
-			name = Vendor;
-			sourceTree = "<group>";
-		};
-		73E86F68182CA2F600D79286 /* DDScrollViewController */ = {
-			isa = PBXGroup;
-			children = (
-				73E86F69182CA2F600D79286 /* DDScrollViewController.h */,
-				73E86F6A182CA2F700D79286 /* DDScrollViewController.m */,
-			);
-			name = DDScrollViewController;
-			path = ../DDScrollViewController;
-			sourceTree = "<group>";
-		};
 		73E86F6C182CA44000D79286 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,8 +122,20 @@
 			children = (
 				73E86F6E182CA45700D79286 /* HomeViewController.h */,
 				73E86F6F182CA45700D79286 /* HomeViewController.m */,
+				A13CADFC19B4149F00C44284 /* DemoTableViewController.h */,
+				A13CADFD19B4149F00C44284 /* DemoTableViewController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A13CADFA19B4131B00C44284 /* DDScrollViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A13CADF819B4131B00C44284 /* DDScrollViewController.h */,
+				A13CADF919B4131B00C44284 /* DDScrollViewController.m */,
+			);
+			name = DDScrollViewController;
+			path = ../DDScrollViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,7 +204,8 @@
 			files = (
 				73E86F45182CA1F500D79286 /* AppDelegate.m in Sources */,
 				73E86F41182CA1F500D79286 /* main.m in Sources */,
-				73E86F6B182CA2F700D79286 /* DDScrollViewController.m in Sources */,
+				A13CADFE19B4149F00C44284 /* DemoTableViewController.m in Sources */,
+				A13CADFB19B4131B00C44284 /* DDScrollViewController.m in Sources */,
 				73E86F70182CA45700D79286 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

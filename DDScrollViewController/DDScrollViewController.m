@@ -48,11 +48,7 @@
 
 - (void)reloadData
 {
-    NSArray *subViews = [self.scrollView subviews];
-    if([subViews count] != 0)
-    {
-        [subViews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    }
+    [self.scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
     for (int i = 0; i < 3; i ++)
     {
@@ -102,7 +98,7 @@
     return [self.dataSource numberOfViewControllerInDDScrollView:self];
 }
 
-- (void)setoffsetRatio:(CGFloat)offsetRatio
+- (void)setOffsetRatio:(CGFloat)offsetRatio
 {
     if (_offsetRatio != offsetRatio)
     {

@@ -23,7 +23,7 @@
 
 - (void)awakeFromNib
 {
-    NSUInteger numberOfPages = 4;
+    NSUInteger numberOfPages = 5;
     self.viewControllerArray = [[NSMutableArray alloc] initWithCapacity:numberOfPages];
     for (NSUInteger k = 0; k < numberOfPages; ++k)
     {
@@ -34,6 +34,7 @@
     [self.viewControllerArray replaceObjectAtIndex: 1 withObject: [self.storyboard instantiateViewControllerWithIdentifier:@"Top2"]];
     [self.viewControllerArray replaceObjectAtIndex: 2 withObject: [self.storyboard instantiateViewControllerWithIdentifier:@"Top3"]];
     [self.viewControllerArray replaceObjectAtIndex: 3 withObject: [self.storyboard instantiateViewControllerWithIdentifier:@"Top4"]];
+    [self.viewControllerArray replaceObjectAtIndex: 4 withObject: [self.storyboard instantiateViewControllerWithIdentifier:@"Top5"]];
 }
 
 #pragma mark - DDScrollViewDataSource
